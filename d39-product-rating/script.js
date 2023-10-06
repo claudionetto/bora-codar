@@ -4,19 +4,21 @@ const arrowReturn = document.getElementById("arrow-return");
 const btnSend = document.getElementById("btn-send");
 
 stars.forEach((element) => {
-  element.addEventListener("click", () => {
-    const starSelected = document.querySelector(".selected");
-    if (starSelected) {
-      starSelected.classList.remove("selected");
-    }
-
-    element.classList.add("selected");
-  });
+  element.addEventListener("click", () => toggleSelectedStar(element));
 });
 
 btnConfirm.addEventListener("click", checkRating);
 arrowReturn.addEventListener("click", toggleCard);
 btnSend.addEventListener("click", sendAvalation);
+
+function toggleSelectedStar(element){
+  const starSelected = document.querySelector(".selected");
+    if (starSelected) {
+      starSelected.classList.remove("selected");
+    }
+
+    element.classList.add("selected");
+}
 
 function sendAvalation() {
   const starSelected = document.querySelector(".selected");
