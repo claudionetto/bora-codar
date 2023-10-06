@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <title>Product Rating</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+
+
+      <article class="card active" id="first-card">
+        <div class="card__product">
+          <img src="./images/product.png" alt="Produto" />
+        </div>
+        <div class="card__content">
+          <div class="review">
+            <div class="review__title">
+              <h2>Avalie o produto</h2>
+              <p>
+                O que você achou do produto <br />
+                <span>Smartwatch Amazfit Bip U Pro</span> ?
+              </p>
+            </div>
+            <div class="review__rating">
+              <div class="stars">
+                <i class="ph-fill ph-star" data-value="5"></i>
+                <i class="ph-fill ph-star" data-value="4"></i>
+                <i class="ph-fill ph-star" data-value="3"></i>
+                <i class="ph-fill ph-star" data-value="2"></i>
+                <i class="ph-fill ph-star" data-value="1"></i>
+              </div>
+              <div class="helper-text">
+                <span>Ruim</span>
+                <span>Ótimo</span>
+              </div>
+            </div>
+          </div>
+          <button class="btn" id="btn-confirm">
+            <span>Confirmar</span><i class="ph ph-arrow-right"></i>
+          </button>
+        </div>
+      </article>
+
+      <article class="card" id="second-card">
+        <div class="card__product">
+          <i class="ph ph-arrow-left" id="arrow-return"></i>
+          <img src="./images/product.png" alt="Produto" />
+        </div>
+        <div class="card__content">
+          <div class="review">
+            <div class="review__title">
+              <h2>Deixe um comentário</h2>
+              <p>
+                Conte sobre o motivo da sua avaliação
+              </p>
+            </div>
+            <textarea class="review__comment" name="comment" id="review-comment"></textarea>
+          </div>
+          <button class="btn" id="btn-send">
+            <span>Enviar</span><i class="ph ph-arrow-right"></i>
+          </button>
+        </div>
+      </article>
+
+  </body>
+</html>
